@@ -10,7 +10,8 @@ import PrivacyMessage from './components/PrivacyMessage';
 
 
 function App() {
-  const privacy=useSelector((store)=>store.privacy);
+  const privacy=useSelector((store)=>store.counter.privacy);
+
   return (
      <Container> 
 
