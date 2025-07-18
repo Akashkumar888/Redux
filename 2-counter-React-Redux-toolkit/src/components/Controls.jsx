@@ -3,7 +3,8 @@
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
 
-import {counterActions} from '../store/index'
+import {counterActions} from '../store/counter';
+import {privacyActions} from '../store/privacy';
 
 const Controls = () => {
 
@@ -28,12 +29,14 @@ const Controls = () => {
   inputElement.current.value="";
   };
   
-  const handlePrivacyToggle=()=>{
-  dispatch(counterActions.privacyToggle());
-  };
   const handleClear=()=>{
     dispatch(counterActions.clear());
   };
+  
+  const handlePrivacyToggle=()=>{
+  dispatch(privacyActions.privacyToggle());
+  };
+
 
   return (
     <>
